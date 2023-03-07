@@ -5,7 +5,7 @@ import { CartButton } from "../CartButton";
 
 import { X } from 'phosphor-react';
 
-import { CartClose, CartContent, CartProduct, CartProductDetails, CartProductImage } from './styles';
+import { CartClose, CartContent, CartFinalization, CartProduct, CartProductDetails, CartProductImage, FinalizationDetails } from './styles';
 
 export function Cart() {
   return (
@@ -42,6 +42,20 @@ export function Cart() {
               </CartProductDetails>
             </CartProduct>
           </section>
+
+          <CartFinalization>
+            <FinalizationDetails>
+              <div>
+                <span>Quantidade</span>
+                <p>2 itens</p>
+              </div>
+              <div>
+                <span>Valor total</span>
+                <p>R$ 100,00</p>
+              </div>
+            </FinalizationDetails>
+            <button>Finalizar compra</button>
+          </CartFinalization>
         </CartContent>
       </Dialog.Portal>
     </Dialog.Root>
