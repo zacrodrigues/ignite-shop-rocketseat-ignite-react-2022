@@ -10,6 +10,7 @@ import { HomeContainer, Product } from "../styles/pages/home";
 
 import 'keen-slider/keen-slider.min.css'
 import Stripe from "stripe";
+import { CartButton } from "../components/CartButton";
 
 interface HomeProps {
   products: {
@@ -41,8 +42,11 @@ export default function Home({ products }: HomeProps) {
               <Image src={product.imageUrl} width={520} height={480} alt='' />
 
               <footer>
-                <strong>{product.name}</strong>
-                <span>{product.price}</span>
+                <div>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </div>
+                <CartButton color='green' size='large' />
               </footer>
             </Product>
           </Link>
