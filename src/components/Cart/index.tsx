@@ -6,8 +6,12 @@ import { CartButton } from "../CartButton";
 import { X } from 'phosphor-react';
 
 import { CartClose, CartContent, CartFinalization, CartProduct, CartProductDetails, CartProductImage, FinalizationDetails } from './styles';
+import { useCart } from '../../hooks/useCart';
 
 export function Cart() {
+  const { cartItems } = useCart()
+  const cartQuantity = cartItems.length
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
